@@ -10,7 +10,8 @@ ticker_mapping = {
     "Google": "GOOG",
     "Microsoft": "MSFT",
     "Tesla": "TSLA",
-    "Gold": "GC"}
+    "Gold": "GC",
+    "SP500": "^GSPC"}
 #select company
 ticker = st.selectbox("Select a ticker symbol:", ticker_mapping.keys())
 #select date 
