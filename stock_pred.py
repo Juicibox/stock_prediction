@@ -19,7 +19,8 @@ ticker_mapping = {
 
 # set the page
 st.set_page_config(page_title="Valor de mercado", page_icon="📊", layout="wide")
-
+if st.button('Volver a proyectos'):
+    st.markdown('<a href="https://juicibox.github.io/proyectos.html" target="_self">Click</a>', unsafe_allow_html=True)
 
 #load array
 with open('sequen_goog', 'rb') as f:
