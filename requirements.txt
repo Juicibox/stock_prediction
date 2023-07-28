@@ -2,4 +2,6 @@ yfinance
 numpy
 pandas
 plotly.express
+sklearn
+tensorflow
 streamlit
