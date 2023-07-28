@@ -37,31 +37,31 @@ with open('sequen_500', 'rb') as f:
 ticker = st.sidebar.selectbox("Selecciona la Acción:", ticker_mapping.keys())
 # setup for the ticker
 if ticker == "Google":
-    st.sidebar.image("logo1.png")
+    st.sidebar.image("img/logo1.png")
     start_date = "2016-06-15"
     num_ac = 12609
     sequences = seque_goo
     final_model = tf.keras.models.load_model('model/model_goog.h5')
 elif ticker == "Microsoft":
-    st.sidebar.image("logo2.png")
+    st.sidebar.image("img/logo2.png")
     start_date = "2016-03-02"
     num_ac = 7432
     sequences = seque_ms
     final_model = tf.keras.models.load_model('model/model_msft.h5')
 elif ticker == "Tesla":
-    st.sidebar.image("logo3.png")
+    st.sidebar.image("img/logo3.png")
     start_date = "2016-03-02"
     num_ac = 3169
     sequences = seque_ts
     final_model = tf.keras.models.load_model('model/model_tsla.h5')
 elif ticker == "Gold":
-    st.sidebar.image("logo4.png")
+    st.sidebar.image("img/logo4.png")
     start_date = "2016-02-02"
     num_ac = 0
     sequences = seque_oro
     final_model = tf.keras.models.load_model('model/model_oro.h5')
 else:
-    st.sidebar.image("logo5.png")
+    st.sidebar.image("img/logo5.png")
     start_date = "2016-02-02"
     num_ac = 0
     sequences = seque_500
