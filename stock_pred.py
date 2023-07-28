@@ -21,23 +21,23 @@ st.set_page_config(page_title="Valor de mercado", page_icon="📊", layout="wide
 ticker = st.sidebar.selectbox("Selecciona la compañia:", ticker_mapping.keys())
 # setup for the ticker
 if ticker == "Google":
-    st.sidebar.image("logo1.png")
+    st.sidebar.image("img/logo1.png")
     start_date = "2016-06-15"
     num_ac = 12609
 elif ticker == "Microsoft":
-    st.sidebar.image("logo2.png")
+    st.sidebar.image("img/logo2.png")
     start_date = "2016-03-02"
     num_ac = 7432
 elif ticker == "Tesla":
-    st.sidebar.image("logo3.png")
+    st.sidebar.image("img/logo3.png")
     start_date = "2016-03-02"
     num_ac = 3169
 elif ticker == "Gold":
-    st.sidebar.image("logo4.png")
+    st.sidebar.image("img/logo4.png")
     start_date = "2016-02-02"
     num_ac = 0
 else:
-    st.sidebar.image("logo5.png")
+    st.sidebar.image("img/logo5.png")
     start_date = "2016-02-02"
     num_ac = 0
 
