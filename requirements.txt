@@ -2,6 +2,6 @@ yfinance
 numpy
 pandas
 plotly.express
-sklearn
+scikit-learn
 tensorflow
 streamlit
