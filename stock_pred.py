@@ -119,12 +119,12 @@ def predic():
         data=pred_days,
         columns=['Open', 'High', 'Low', 'Close'])
     df_fin = df_pred
-    df_fin['Date'] = pd.date_range(start='2023-07-28', periods=10)
+    df_fin['Date'] = pd.date_range(start='2023-08-11', periods=10)
 
     return df_fin
 
 # Display the head of the dataframe
-st.markdown("## Predicciones del Mercado del 28 al 06 de Agosto del 2023")
+st.markdown("## Predicciones del Mercado")
 df_fin = predic()
 df_fin = df_fin.set_index('Date')
 pre1, pre2 = st.columns(2)
