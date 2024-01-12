@@ -8,7 +8,6 @@ import pickle
 import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 
-tf.autodiff.set_verbosity(0)
 
 # company dictionary 
 ticker_mapping = {
