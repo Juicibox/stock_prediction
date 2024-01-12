@@ -3,5 +3,5 @@ numpy
 pandas == 2.0.2
 plotly.express
 scikit-learn
-tensorflow ==  
+tensorflow 
 streamlit == 1.24.1
