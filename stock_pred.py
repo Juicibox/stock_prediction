@@ -8,8 +8,7 @@ import pickle
 import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 
 # company dictionary 
 ticker_mapping = {
