@@ -1,7 +1,7 @@
 yfinance == 0.2.26
 numpy 
-pandas == 2.0.2
+pandas 
 plotly.express
 scikit-learn
-tensorflow 
+tensorflow == 2.13.0
 streamlit == 1.24.1
