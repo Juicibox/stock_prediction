@@ -1,6 +1,6 @@
-yfinance
-numpy
-pandas
+yfinance == 0.2.26
+numpy 
+pandas == 2.0.2
 plotly.express
 scikit-learn
 tensorflow ==  2.13.0
