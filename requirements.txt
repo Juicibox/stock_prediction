@@ -3,5 +3,5 @@ numpy
 pandas
 plotly.express
 scikit-learn
-tensorflow
+tensorflow ==  2.13.0
 streamlit
