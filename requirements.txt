@@ -3,6 +3,6 @@ numpy
 pandas 
 plotly.express
 scikit-learn
-tensorflow
+tensorflow==2.15.0
 streamlit 
 keras-tuner
