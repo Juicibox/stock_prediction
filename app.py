@@ -47,13 +47,13 @@ if ticker == "Google":
     final_model = tf.keras.models.load_model('model/model_goog.h5')
 elif ticker == "Microsoft":
     st.sidebar.image("img/logo2.png")
-    start_date = "2019-03-02"
+    start_date = "2020-03-02"
     num_ac = 7432
     sequences = seque_ms
     final_model = tf.keras.models.load_model('model/model_msft.h5')
 elif ticker == "Tesla":
     st.sidebar.image("img/logo3.png")
-    start_date = "2018-03-02"
+    start_date = "2019-03-02"
     num_ac = 3169
     sequences = seque_ts
     final_model = tf.keras.models.load_model('model/model_tsla.h5')
