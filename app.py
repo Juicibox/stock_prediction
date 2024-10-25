@@ -22,8 +22,7 @@ ticker_mapping = {
 # set the page
 
 st.set_page_config(page_title="Valor de mercado",page_icon="logo.png", layout="wide")
-if st.button('Volver a proyectos'):
-    st.markdown('<a href="https://juicibox.github.io/proyectos.html" target="_self">Click</a>', unsafe_allow_html=True)
+
 
 #load array
 with open('sequen_goog', 'rb') as f:
@@ -42,19 +41,19 @@ ticker = st.sidebar.selectbox("Selecciona la Acción:", ticker_mapping.keys())
 # setup for the ticker
 if ticker == "Google":
     st.sidebar.image("img/logo1.png")
-    start_date = "2016-06-15"
+    start_date = "2018-06-15"
     num_ac = 12609
     sequences = seque_goo
     final_model = tf.keras.models.load_model('model/model_goog.h5')
 elif ticker == "Microsoft":
     st.sidebar.image("img/logo2.png")
-    start_date = "2016-03-02"
+    start_date = "2018-03-02"
     num_ac = 7432
     sequences = seque_ms
     final_model = tf.keras.models.load_model('model/model_msft.h5')
 elif ticker == "Tesla":
     st.sidebar.image("img/logo3.png")
-    start_date = "2016-03-02"
+    start_date = "2018-03-02"
     num_ac = 3169
     sequences = seque_ts
     final_model = tf.keras.models.load_model('model/model_tsla.h5')
@@ -66,7 +65,7 @@ elif ticker == "Gold":
     final_model = tf.keras.models.load_model('model/model_oro.h5')
 else:
     st.sidebar.image("img/logo5.png")
-    start_date = "2016-02-02"
+    start_date = "2018-02-02"
     num_ac = 0
     sequences = seque_500
     final_model = tf.keras.models.load_model('model/model_500.h5')
