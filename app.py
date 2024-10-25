@@ -78,21 +78,20 @@ st.title("Análisis del Mercado de Valores")
 
 placeholder = st.empty()
 
+if not df.empty and len(df) > 1:
+    market_cap = (df['Close'].iloc[-1] * num_ac) / 1000000
+    rpd = ((df['Close'].iloc[-1] - df['Open'].iloc[-1]) / df['Open'].iloc[-1]) * 100
+    rpd2 = ((df['Close'].iloc[-2] - df['Open'].iloc[-2]) / df['Open'].iloc[-2]) * 100
 
-market_cap = (df['Close'].iloc[-1]  * num_ac)/1000000
-rpd = ((df['Close'].iloc[-1] - df['Open'].iloc[-1])/df['Open'].iloc[-1])*100
-rpd2=((df['Close'].iloc[-2] - df['Open'].iloc[-2])/df['Open'].iloc[-2])*100
+    with placeholder.container():
+        kpi2, kpi3, kpi4, kpi5 = st.columns(4)
 
-
-with placeholder.container():
-    kpi2, kpi3, kpi4, kpi5 = st.columns(4)
-
-    kpi2.metric(label="Precio Cierre", value=round(df["Close"].iloc[-1],2), delta= round(df['Close'].iloc[-1]-df['Close'].iloc[-2], 2))
-    kpi3.metric(label="Precio Apertura", value=round(df["Open"].iloc[-1],2), delta= round(df['Open'].iloc[-1]-df['Open'].iloc[-2], 2))
-    kpi4.metric(label="Rendimiento Porcentual Diario", value=f" {round(rpd, 2)} %", delta = round(rpd- rpd2, 2))
-    kpi5.metric(label="Capitalización Bursátil", value=f" $ {round(market_cap,2)} T", delta= round(market_cap - df['Close'].iloc[-2]  * num_ac))
-
-
+        kpi2.metric(label="Precio Cierre", value=round(df["Close"].iloc[-1], 2), delta=round(df['Close'].iloc[-1] - df['Close'].iloc[-2], 2))
+        kpi3.metric(label="Precio Apertura", value=round(df["Open"].iloc[-1], 2), delta=round(df['Open'].iloc[-1] - df['Open'].iloc[-2], 2))
+        kpi4.metric(label="Rendimiento Porcentual Diario", value=f" {round(rpd, 2)} %", delta=round(rpd - rpd2, 2))
+        kpi5.metric(label="Capitalización Bursátil", value=f" $ {round(market_cap, 2)} T", delta=round(market_cap - df['Close'].iloc[-2] * num_ac))
+else:
+    st.error("No hay suficientes datos disponibles para realizar el análisis.")
     fig_col1, fig_col2 = st.columns(2)
     with fig_col1:
         st.markdown("### Volumen de Operaciones")
