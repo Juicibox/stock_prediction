@@ -120,7 +120,7 @@ def predic():
         data=pred_days,
         columns=['Open', 'High', 'Low', 'Close'])
     df_fin = df_pred
-    df_fin['Date'] = pd.date_range(start='2024-08-11', periods=10)
+    df_fin['Date'] = pd.date_range(start='2024-06-11', periods=10)
 
     return df_fin
 
